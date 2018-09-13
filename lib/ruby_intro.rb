@@ -23,9 +23,6 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, sum
- 
-   
-  # check whether any two elements sum to n
   result = false
   arr.each do |m| 
     arr.each do |n| 
