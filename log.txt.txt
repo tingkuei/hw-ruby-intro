@@ -8,6 +8,7 @@ Ruby intro part 1
     should be defined
     returns the correct sum [7 points]
     works even if 2 largest values are the same [3 points]
+    returns zero if array is empty [10 points]
     returns value of the element if just one element [10 points]
   #sum_to_n
     should be defined
