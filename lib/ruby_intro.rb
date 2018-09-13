@@ -3,33 +3,66 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  k = 0
+  arr.each do |m| 
+      k += m end
+  return k
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.empty? == true
+    return 0
+  elsif arr.length == 1
+    return arr[0]
+  elsif
+    arr.sort!
+    len = arr.length
+    sum = arr[len-1] + arr[len-2]
+    return sum
+  end
 end
 
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+def sum_to_n? arr, sum
+ 
+   
+  # check whether any two elements sum to n
+  result = false
+  arr.each do |m| 
+    arr.each do |n| 
+      if m != n and m + n == sum
+          result = true
+      end
+    end
+  end
+  return result
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, #{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  /^[bcdfghjklmnpqrstvwxyz]/i === s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  /^0+$|^[01]*00$/ === s
 end
 
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  attr_accessor :isbn, :price  
+  def initialize isbn, price
+    raise ArgumentError if isbn.empty? || price <= 0
+   
+    @isbn = isbn
+    @price = price
+  end
+  
+  def price_as_string
+    sprintf "$%.2f", @price
+  end
 end
